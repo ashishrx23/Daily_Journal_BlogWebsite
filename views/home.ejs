@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+
+<h1 style="font-weight: bold;">Home</h1>
+<p><%= startingContent %></p>
+<br>
+<!-- <img src="https://cdn.pixabay.com/photo/2016/09/18/03/40/logo-1677364_960_720.png" alt=""> -->
+<br>
+
+<% posts.forEach(function(post){ %>     <!-- forEach method used as for loop  || Challenge-14 -->
+    <h1 > <%= post.title %> </h1>
+    <p>
+        <%= (post.content).substring(0, 100) + " ..." %> 
+        <a href="/post/<%=post.title%>">Read full in new page</a>
+    </p>
+
+<% }); %>   
+
+<%- include("partials/footer"); -%>
